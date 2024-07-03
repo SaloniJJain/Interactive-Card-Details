@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" sizes="32x32" href="'"> -->
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <main>
+    <div class="container">
+        <div class="left">
+            <div class="cards">
+                <div class="front">
+                    <img src="card-logo.svg" alt="logo"
+                    class="card-logo">
+                    <div class="card-container">
+                        <img src="front.png" alt="card front">
+                        <h1 id="number">0000 0000 0000 0000</h1>
+                        <div class="card-info">
+                            <span id="name">Future Core Innovations</span>
+                            <span id="date">
+                                <span id="month">00</span>
+                                /
+                                <span id="year">00</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <img src="back.png" alt="back">
+                    <span id="cvc">000</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <form >
+                <div class="block1">
+                    <label for="input-name">
+                        Cardholders Name
+                    </label>
+                    <input type="text" 
+                    placeholder="e.g Future Core Innovations"
+                    id="input-name" 
+                    required>
+                </div>
+                <div class="block2">
+                    <label for="input-number">Card Number</label>
+                    <input type="number" 
+                    placeholder="e.g 1111 2222 3333 4444"
+                    oninput="if(this.value.length>this,maxLength)this.value=this.value.slice(0,this.maxLength);"
+                    maxlength="16"
+                    minlength="16"
+                    id="input-number"
+                    required
+                    />
+                </div>
+                <div class="block3">
+                    <div class="date">
+                        <label for="date">Exp. Date(MM/YY)</label>
+                        <div class="two-input">
+                            <div>
+                                <input type="number"
+                                placeholder="MM"
+                                oninput="if(this.value.length>this.maxLength)this.value=this.value.slice(0,maxLength);"
+                                minlength="2"
+                                maxlength="2"
+                                id="input-month"
+                                required
+                                />
+
+                            </div>
+                            <div>
+                                <input 
+                                type="number"
+                                placeholder="YY"
+                                oninput="if(this.value.length>this.maxLength)this.value=this.value.slice(0,maLength);"
+                                minlength="2"
+                                maxlength="2"
+                                id="input-year"
+                                required
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cvc-block">
+                        <label for="cvc-block">CVC</label>
+                        <input type="number"
+                        placeholder="e.g.786"
+                        oninput="if(this.value.length>this.maxlength)this.value=this.value.slice(0,maxlength);"
+                        maxlength="3"
+                        id="input-cvc"
+                        required
+                        />
+                    </div>
+                </div>
+                <button id="submit-button" type="submit">Confirm</button>
+            </form>
+            <div class="thank-you hidden">
+                <img src="icon-complete.svg" alt="Completed">
+                <h1>Thank you!</h1>
+                <p>We've added your card details</p>
+                <button>Continue</button>
+            </div>
+        </div>
+    </div>
+</main>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+
+    </body>
+</html>
+
+
+
